@@ -215,21 +215,21 @@ const CourseDescription = () => {
               <InfoIcon><FaMapMarkerAlt /></InfoIcon>
               <InfoText>
                 <h3>Location</h3>
-                <p>Granoff Ctr 110</p>
+                <p>Check C@B</p>
               </InfoText>
             </InfoItem>
             <InfoItem>
               <InfoIcon><FaCalendarAlt /></InfoIcon>
               <InfoText>
                 <h3>Service Hours</h3>
-                <p>Tue/Thu 9:00-10:20am</p>
+                <p>Check C@B</p>
               </InfoText>
             </InfoItem>
             <InfoItem>
               <InfoIcon><FaUser /></InfoIcon>
               <InfoText>
                 <h3>Head Chef</h3>
-                <p>Prof. Eric Ewing</p>
+                <p>Prof. Randall Balestriero</p>
               </InfoText>
             </InfoItem>
           </InfoGrid>

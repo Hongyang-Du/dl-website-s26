@@ -326,7 +326,7 @@ const Staff = () => {
       </ContactTicket>
 
       <StaffBasket>
-        <RoleHeader><GiChefToque /> Head Fryer</RoleHeader>
+        <RoleHeader><GiChefToque /> Deepest Fryer</RoleHeader>
         <Grid>
           <OrderTicket>
             <TicketHeader>ORDER #001</TicketHeader>
@@ -357,7 +357,7 @@ const Staff = () => {
 
         <div style={{ height: '3rem' }} />
 
-        <RoleHeader><GiChickenLeg /> Crispy Managers (HTAs)</RoleHeader>
+        <RoleHeader><GiChickenLeg /> Cooked Managers </RoleHeader>
         <Grid>
           {staffData.htas.map((hta, i) => (
             <OrderTicket key={i} style={{ animationDelay: `${i * 0.1}s` }}>
@@ -390,7 +390,7 @@ const Staff = () => {
 
         <div style={{ height: '3rem' }} />
 
-        <RoleHeader><GiFrenchFries /> Seasoned Line Cooks (UTAs)</RoleHeader>
+        <RoleHeader><GiFrenchFries /> Fried Line Cooks </RoleHeader>
         <Grid>
           {staffData.utas.map((uta, i) => (
             <OrderTicket key={i} style={{ animationDelay: `${i * 0.05}s` }}>

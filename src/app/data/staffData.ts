@@ -15,7 +15,7 @@ export const staffData = {
       name: "Armaan Patankar",
       image: "/images/profiles/armaan.jpg",
       friedImage: "/images/profiles/armaan.jpg", // TODO: Replace with fried food version
-      description: "Cooking up neural networks since 2024.",
+      description: "Deep fried as a neural network.",
     },
     {
       name: "Aryan Singh",
@@ -27,7 +27,7 @@ export const staffData = {
       name: "Hongyang Du",
       image: "/images/profiles/hongyang.jpg",
       friedImage: "/images/profiles/hongyang.jpg", // TODO: Replace with fried food version
-      description: "Cooking up neural networks since 2024.",
+      description: "Crispy gradients are my specialty.",
     }
   ],
   utas: [
