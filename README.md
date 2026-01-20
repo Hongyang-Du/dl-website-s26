@@ -1,4 +1,4 @@
-# dl-website-f25
+# dl-website-s26
 
 Hey team, this is just the general idea that we have for the website. This years theme is **DEEP EARTH**. The motivation behind it is as we get deeper in the course, we get deeper into the Earth. The website will parallel this by changing the background as you scroll deeper on the website. I don't know what the exact layers of the Earth we want are, but I do know Eric wants us to end on mole people 🐀. 
 
