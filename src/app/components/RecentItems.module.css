@@ -1,0 +1,174 @@
+/* components/RecentItems.module.css */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recentItem {
+  flex: 1;
+  background-color: var(--cream);
+  padding: 2.5rem 2rem;
+  /* Use a slightly taller padding to simulate ticket length */
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  /* Ticket Shadow - lift it off the table */
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.1), 
+    0 8px 16px rgba(0,0,0,0.1),
+    0 16px 32px rgba(0,0,0,0.1);
+  
+  font-family: 'Courier New', 'Courier', monospace;
+  color: var(--diner-black);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* No border, just the paper look */
+}
+
+/* Perforated Edges - Top */
+.recentItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -8px; 
+  width: 100%;
+  height: 16px; 
+  background-color: transparent;
+  background-image: radial-gradient(circle, transparent 7px, var(--cream) 8px);
+  background-size: 20px 20px; 
+  background-position: 0 10px; 
+  background-repeat: repeat-x;
+}
+
+/* Perforated Edges - Bottom */
+.recentItem::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 16px;
+  background-color: transparent;
+  background-image: radial-gradient(circle, transparent 7px, var(--cream) 8px);
+  background-size: 20px 20px; 
+  background-position: 0 -10px;
+  background-repeat: repeat-x;
+}
+
+.recentItem:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 
+    0 4px 4px rgba(0,0,0,0.05),
+    0 12px 24px rgba(0,0,0,0.15),
+    0 24px 48px rgba(0,0,0,0.15);
+}
+
+.title {
+  font-family: var(--font-display); 
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: var(--cherry-red);
+  
+  /* Header Box Style */
+  border: 2px solid var(--cherry-red);
+  padding: 10px;
+  background: white; /* slightly brighter area for the header */
+  transform: rotate(-1deg); /* Slight stamp look */
+  width: fit-content;
+  align-self: center;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  text-align: center;
+  border-top: 1px dashed var(--diner-black);
+  padding-top: 20px;
+}
+
+.itemTitle {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--diner-black);
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.itemDate {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: var(--diner-black);
+  opacity: 0.8;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px double var(--diner-black); /* Total line */
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  
+  /* "Stamped" or "Circled" item look */
+  color: var(--cherry-red);
+  border: 2px solid var(--cherry-red);
+  border-radius: 50% / 80% 90% 80% 90%; /* Oval/hand-drawn circle shape */
+  transform: rotate(-2deg);
+}
+
+.linkButton:nth-child(even) {
+     transform: rotate(1deg);
+     border-radius: 60% / 90% 85% 90% 85%;
+}
+
+.linkButton:hover {
+  background: var(--cherry-red);
+  color: var(--cream);
+  transform: scale(1.1) rotate(0deg);
+  box-shadow: 0 2px 4px rgba(230, 0, 0, 0.3);
+}
+
+.linkIcon {
+  margin-right: 6px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 760px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .recentItem {
+    padding: 2rem 1.5rem;
+  }
+}
+
